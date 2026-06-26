@@ -1,153 +1,174 @@
 <!DOCTYPE html>
-<html lang="am">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atot International Hotel</title>
-    <style>
-        /* ንፁህና ዘመናዊ ስታይል */
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+    <style id="premium-v3-blue-theme">
+        html, body {
             margin: 0;
             padding: 0;
-            background-color: #fafafa;
-            color: #222;
-        }
-        
-        /* ራስጌ */
-        header {
-            background-color: #111111;
-            color: #ffffff;
-            text-align: center;
-            padding: 80px 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            letter-spacing: 1px;
-        }
-        header p {
-            font-size: 1.1rem;
-            color: #d4af37; /* የወርቅ ቀለም */
-            margin-top: 10px;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', -apple-system, Roboto, sans-serif;
+            background-color: #050a18 !important; /* Premium Dark Blue */
+            color: #ffffff !important;
+            overflow-x: hidden;
         }
 
-        /* ማውጫ */
-        nav {
-            background-color: #1f1f1f;
-            text-align: center;
-            padding: 15px 0;
-        }
-        nav a {
-            color: #aaa;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-weight: bold;
-            font-size: 0.95rem;
-        }
-        nav a:hover {
-            color: #ffffff;
-        }
-
-        /* ዋናው ክፍል */
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        section {
-            background: #ffffff;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 6px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        h2 {
-            color: #111111;
-            font-size: 1.5rem;
-            border-bottom: 2px solid #d4af37;
-            padding-bottom: 8px;
-            margin-top: 0;
-        }
-
-        /* የአገልግሎት ዝርዝር */
-        .service-item {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        .service-item:last-child {
-            border-bottom: none;
-        }
-        .service-item h3 {
-            margin: 0 0 5px 0;
-            color: #333;
-        }
-
-        /* ፉተር */
-        footer {
-            background-color: #111111;
-            color: #666;
+        /* Full screen view matching the video */
+        .hero-viewport {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             padding: 20px;
-            margin-top: 60px;
+            box-sizing: border-box;
+            background: radial-gradient(circle at center, #0a1931 0%, #050c1a 100%) !important;
+        }
+
+        /* 📍 Location Badge */
+        .location-badge {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 18px;
+            border-radius: 30px;
             font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+        }
+
+        /* Giant Main Title (The Heart of...) */
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin: 0 0 20px 0;
+            max-width: 750px;
+            color: #ffffff !important;
+            letter-spacing: -0.5px;
+        }
+
+        /* Subtitle description */
+        .hero-desc {
+            font-size: 1.15rem;
+            color: #8fa0bc;
+            max-width: 580px;
+            margin: 0 0 40px 0;
+            line-height: 1.6;
+        }
+
+        /* Two big action buttons */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 60px;
+        }
+
+        .custom-btn {
+            padding: 16px 32px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .btn-blue {
+            background-color: #0066ff !important; /* Solid Bright Blue */
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #ffffff !important;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .custom-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+        }
+
+        /* Stats metrics at the bottom */
+        .metrics-row {
+            display: flex;
+            gap: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 35px;
+            width: 100%;
+            max-width: 600px;
+            justify-content: center;
+        }
+
+        .metric-box {
+            text-align: left;
+        }
+
+        .metric-num {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0066ff !important;
+            display: block;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .metric-text {
+            font-size: 0.85rem;
+            color: #647796;
+            font-weight: 500;
+        }
+
+        /* Responsive layout for mobile devices */
+        @media (max-width: 600px) {
+            .hero-title { font-size: 2.1rem; }
+            .button-group { flex-direction: column; width: 100%; max-width: 300px; }
+            .metrics-row { gap: 25px; }
+            .metric-num { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Atot International Hotel</h1>
-        <p>Worabe's Premier Luxury Hotel</p>
-    </header>
-
-    <nav>
-        <a href="#about">ስለ እኛ</a>
-        <a href="#services">አገልግሎቶች</a>
-        <a href="#contact">አድራሻ</a>
-    </nav>
-
-    <div class="container">
+    <div class="hero-viewport">
         
-        <section id="about">
-            <h2>ስለ ሆቴሉ</h2>
-            <p>አቶት ኢንተርናሽናል ሆቴል በወራቤ ከተማ እምብርት ላይ የሚገኝ፣ ለየት ያለ መስተንግዶና ዘመናዊ ምቾትን ያጣመረ የቅንጦት ማረፊያ ነው። የደንበኞቻችን ደህንነትና ደስታ የእኛ ቀዳሚ ተግባር ነው።</p>
-        </section>
+        <div class="location-badge">📍 WORABE, ETHIOPIA</div>
+        
+        <h1 class="hero-title">The Heart of Atot's Luxury & Business</h1>
+        
+        <p class="hero-desc">
+            Atot International Hotel combines modern comfort, premium dining, and exceptional hospitality right in the center of Worabe.
+        </p>
 
-        <section id="services">
-            <h2>አገልግሎቶቻችን</h2>
-            
-            <div class="service-item">
-                <h3>✨ ልዩ መኝታ ክፍሎች</h3>
-                <p>ከፍተኛ ጥራት ያላቸው አልጋዎች፣ የሞቀ ውሃ እና ሙሉ የክፍል ውስጥ አገልግሎት።</p>
-            </div>
-            
-            <div class="service-item">
-                <h3>🍽️ ጣፋጭ ምግቦች</h3>
-                <p>የሀገር ውስጥና የባህር ማዶ ምግቦች በምርጥ ሼፎቻችን ተዘጋጅተው ይጠብቁዎታል።</p>
-            </div>
-            
-            <div class="service-item">
-                <h3>🏛️ ስብሰባና ድግስ</h3>
-                <p>ለሰርግ፣ ለልደትና ለተለያዩ ስብሰባዎች የሚሆኑ ሰፋፊና ዘመናዊ አዳራሾች።</p>
-            </div>
-        </section>
+        <div class="button-group">
+            <a href="https://t.me/zedo" class="custom-btn btn-blue">Book a Room Now 🛌</a>
+            <a href="https://t.me/zedo" class="custom-btn btn-outline">Our Services ✨</a>
+        </div>
 
-        <section id="contact">
-            <h2>አድራሻ</h2>
-            <p>📍 ወራቤ፣ ኢትዮጵያ (ከዋናው መንገድ አጠገብ)</p>
-            <p>📞 +251 9XX XX XX XX</p>
-            <p>📧 info@atothotel.com</p>
-        </section>
+        <div class="metrics-row">
+            <div class="metric-box">
+                <span class="metric-num">50+</span>
+                <span class="metric-text">Premium Rooms</span>
+            </div>
+            <div class="metric-box">
+                <span class="metric-num">5★</span>
+                <span class="metric-text">Service Quality</span>
+            </div>
+            <div class="metric-box">
+                <span class="metric-num">24/7</span>
+                <span class="metric-text">Support Line</span>
+            </div>
+        </div>
 
     </div>
-
-    <footer>
-        <p>&copy; 2026 Atot International Hotel. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
